@@ -856,6 +856,8 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.allocator-V2-mediatek \
     android.hardware.graphics.mapper@4.0-impl-mediatek \
     android.hardware.soundtrigger3-impl \
+    android.hardware.bluetooth.audio-impl-mediatek \
+    audio.bluetooth.mt6878 \
     audio.primary.mt6878 \
     consumerir.common \
     fingerprint.fpc_fod.default \
@@ -1548,6 +1550,7 @@ PRODUCT_PACKAGES += \
     vendor.mediatek.hardware.apuware.utils-V1-ndk_vendor \
     vendor.mediatek.hardware.audio@8.1 \
     vendor.mediatek.hardware.bluetooth.audio-V1-ndk \
+    libbluetooth_audio_session_aidl_mtk \
     vendor.mediatek.hardware.camera.aovservice-V2-ndk \
     vendor.mediatek.hardware.camera.aovservice-V3-ndk \
     vendor.mediatek.hardware.camera.atms-V1-ndk \
