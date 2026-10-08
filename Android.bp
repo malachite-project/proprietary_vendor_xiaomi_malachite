@@ -22896,6 +22896,113 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "android.hardware.bluetooth.audio-impl-mediatek",
+    owner: "xiaomi",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/android.hardware.bluetooth.audio-impl-mediatek.so",
+            ],
+            shared_libs: [
+                "libbase",
+                "libbinder_ndk",
+                "libcutils",
+                "libfmq",
+                "liblog",
+                "android.hardware.bluetooth.audio-V3-ndk",
+                "libbluetooth_audio_session_aidl_mtk",
+                "vendor.mediatek.hardware.bluetooth.audio-V1-ndk",
+                "vendor.mediatek.hardware.bluetooth.audio@2.1",
+                "vendor.mediatek.hardware.bluetooth.audio@2.2",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libbluetooth_audio_session_aidl_mtk",
+    owner: "xiaomi",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libbluetooth_audio_session_aidl_mtk.so",
+            ],
+            shared_libs: [
+                "android.hardware.bluetooth.audio@2.0",
+                "android.hardware.bluetooth.audio@2.1",
+                "libbase",
+                "libcutils",
+                "libbinder_ndk",
+                "libfmq",
+                "liblog",
+                "android.hardware.bluetooth.audio-V3-ndk",
+                "vendor.mediatek.hardware.bluetooth.audio-V1-ndk",
+                "libhidlbase",
+                "libxml2",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "audio.bluetooth.mt6878",
+    owner: "xiaomi",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/hw/audio.bluetooth.mt6878.so",
+            ],
+            shared_libs: [
+                "android.hardware.bluetooth.audio-V3-ndk",
+                "libbluetooth_audio_session_aidl_mtk",
+                "libaudioutils",
+                "libbase",
+                "libbinder_ndk",
+                "libcutils",
+                "libfmq",
+                "liblog",
+                "libutils",
+                "android.hardware.bluetooth.audio@2.0",
+                "android.hardware.bluetooth.audio@2.1",
+                "libbluetooth_audio_session",
+                "libhidlbase",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    relative_install_path: "hw",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "vendor.mediatek.hardware.camera.aovservice-V2-ndk",
     owner: "xiaomi",
     strip: {
