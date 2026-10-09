@@ -35,7 +35,10 @@
 			<Category name="MISC" alias="HFK_PATH,CALLFWD_PATH,SLD_PATH,SPEAKERDOCK_PATH,SPEAKERDOCK_EV_PATH"/>
 		</CategoryType>
 		<CategoryType name="Network">
-			<Category name="GSM" alias="WCDMA,VoLTE,ViLTE,CDMA"/>
+			<Category name="GSM" alias="ViLTE"/>
+			<Category name="WCDMA"/>
+			<Category name="VoLTE"/>
+			<Category name="CDMA"/>
 		</CategoryType>
 	</CategoryTypeList>
 	<ParamUnit>

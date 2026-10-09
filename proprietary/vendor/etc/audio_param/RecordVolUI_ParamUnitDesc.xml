@@ -23,9 +23,9 @@
 			<Category name="VoiceUnLk" visible="false" />
 			<Category name="Customization2" visible="false" />
 			<Category name="CUSTOMIZATION3"/>
-			<Category name="FastRecord" visible="false"/>
-			<Category name="Unprocessed"/>
-			<Category name="IncallRecord"/>
+			<Category name="FastRecord" visible="true"/>
+			<Category name="Unprocessed" visible="true"/>
+			<Category name="IncallRecord" visible="true"/>
 			<Category name="KTV" wording="In Ear Monitor"/>
 		</CategoryType>
 		<CategoryType name="Profile" wording="Device">

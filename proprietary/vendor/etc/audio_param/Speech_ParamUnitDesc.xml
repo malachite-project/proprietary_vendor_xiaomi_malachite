@@ -63,10 +63,17 @@
 				<Category name="4" wording="Level4"/>
 				<Category name="5" wording="Level5"/>
 				<Category name="6" wording="Level6"/>
+				<Category name="7" wording="Level7"/>
+				<Category name="8" wording="Level8"/>
+				<Category name="9" wording="Level9"/>
+				<Category name="10" wording="Level10"/>
 			</CategoryGroup>
 		</CategoryType>
 		<CategoryType name="Network">
 			<Category name="GSM"/>
+			<Category name="WCDMA"/>
+			<Category name="VoLTE"/>
+			<Category name="CDMA"/>
 		</CategoryType>
 	</CategoryTypeList>
 	<ParamUnit>
