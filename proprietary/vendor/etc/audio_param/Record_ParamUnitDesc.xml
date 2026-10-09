@@ -17,9 +17,9 @@
 			<Category name="VR" wording="Voice recognition" />
 			<Category name="VoiceUnLk" visible="false" />
 			<Category name="Customization2" visible="false"/>
-			<Category name="FastRecord" visible="false"/>
-			<Category name="Unprocessed" visible="false"/>
-			<Category name="IncallRecord" visible="false"/>
+			<Category name="FastRecord" visible="true"/>
+			<Category name="Unprocessed" visible="true"/>
+			<Category name="IncallRecord" visible="true"/>
 			<Category name="VoicePerformance" wording="Voice performance recording"/>
 			<Category name="KTV" wording="In Ear Monitor"/>
 		</CategoryType>
