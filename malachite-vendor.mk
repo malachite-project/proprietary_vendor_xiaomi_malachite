@@ -1767,6 +1767,7 @@ PRODUCT_PACKAGES += \
     libswdap \
     libswgamedap \
     libswvqe \
+    libaudiopreprocessing_mtk \
     vendor.dolby.hardware.dms@2.0-service \
     vendor.dolby.hardware.dms.xml \
     mi_thermald \
