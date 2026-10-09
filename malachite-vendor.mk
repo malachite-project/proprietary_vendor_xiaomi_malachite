@@ -1554,6 +1554,8 @@ PRODUCT_PACKAGES += \
     vendor.mediatek.hardware.audio@8.1 \
     vendor.mediatek.hardware.bluetooth.audio-V1-ndk \
     libbluetooth_audio_session_aidl_mtk \
+    libbluetooth_audio_session_aidl_stock \
+    libbluetooth_audio_session_stock \
     vendor.mediatek.hardware.camera.aovservice-V2-ndk \
     vendor.mediatek.hardware.camera.aovservice-V3-ndk \
     vendor.mediatek.hardware.camera.atms-V1-ndk \
