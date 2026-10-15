@@ -696,6 +696,9 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/malachite/proprietary/vendor/etc/camera/gma_custom.txt:$(TARGET_COPY_OUT_VENDOR)/etc/camera/gma_custom.txt \
     vendor/xiaomi/malachite/proprietary/vendor/etc/cust_color.xml:$(TARGET_COPY_OUT_VENDOR)/etc/cust_color.xml \
     vendor/xiaomi/malachite/proprietary/vendor/etc/cust_pq.xml:$(TARGET_COPY_OUT_VENDOR)/etc/cust_pq.xml \
+    vendor/xiaomi/malachite/proprietary/vendor/etc/dolby/dax-default-spatializer.xml:$(TARGET_COPY_OUT_VENDOR)/etc/dolby/dax-default-spatializer.xml \
+    vendor/xiaomi/malachite/proprietary/vendor/etc/dolby/dax-default.xml:$(TARGET_COPY_OUT_VENDOR)/etc/dolby/dax-default.xml \
+    vendor/xiaomi/malachite/proprietary/vendor/etc/dolby_vision.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/dolby_vision.cfg \
     vendor/xiaomi/malachite/proprietary/vendor/etc/ecc_list.xml:$(TARGET_COPY_OUT_VENDOR)/etc/ecc_list.xml \
     vendor/xiaomi/malachite/proprietary/vendor/etc/ecc_list_preference.xml:$(TARGET_COPY_OUT_VENDOR)/etc/ecc_list_preference.xml \
     vendor/xiaomi/malachite/proprietary/vendor/etc/elliptic_sensor.xml:$(TARGET_COPY_OUT_VENDOR)/etc/elliptic_sensor.xml \
@@ -734,13 +737,13 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/malachite/proprietary/vendor/etc/init/init.cccirpcd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.cccirpcd.rc \
     vendor/xiaomi/malachite/proprietary/vendor/etc/init/init.vtservice_aidl.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.vtservice_aidl.rc \
     vendor/xiaomi/malachite/proprietary/vendor/etc/init/ipsec_mon.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/ipsec_mon.rc \
-    vendor/xiaomi/malachite/proprietary/vendor/etc/init/vendor.dolby.hardware.dms@2.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.dolby.hardware.dms@2.0-service.rc \
     vendor/xiaomi/malachite/proprietary/vendor/etc/init/miteelog.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/miteelog.rc \
     vendor/xiaomi/malachite/proprietary/vendor/etc/init/mtk_agpsd_p.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/mtk_agpsd_p.rc \
     vendor/xiaomi/malachite/proprietary/vendor/etc/init/mtkrild.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/mtkrild.rc \
     vendor/xiaomi/malachite/proprietary/vendor/etc/init/netdagent.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/netdagent.rc \
     vendor/xiaomi/malachite/proprietary/vendor/etc/init/nvram_daemon.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/nvram_daemon.rc \
     vendor/xiaomi/malachite/proprietary/vendor/etc/init/tee-supplicant.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/tee-supplicant.rc \
+    vendor/xiaomi/malachite/proprietary/vendor/etc/init/vendor.dolby.hardware.dms@2.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.dolby.hardware.dms@2.0-service.rc \
     vendor/xiaomi/malachite/proprietary/vendor/etc/init/vendor.mediatek.hardware.mmagent-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.mediatek.hardware.mmagent-service.rc \
     vendor/xiaomi/malachite/proprietary/vendor/etc/init/vendor.mediatek.hardware.mmlpq@V1-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.mediatek.hardware.mmlpq@V1-service.rc \
     vendor/xiaomi/malachite/proprietary/vendor/etc/init/vendor.mediatek.hardware.nvram-sevice.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.mediatek.hardware.nvram-sevice.rc \
@@ -751,8 +754,7 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/malachite/proprietary/vendor/etc/libese-tms.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libese-tms.conf \
     vendor/xiaomi/malachite/proprietary/vendor/etc/libnfc-tms.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-tms.conf \
     vendor/xiaomi/malachite/proprietary/vendor/etc/mali_platform.config:$(TARGET_COPY_OUT_VENDOR)/etc/mali_platform.config \
-    vendor/xiaomi/malachite/proprietary/vendor/etc/dolby/dax-default-spatializer.xml:$(TARGET_COPY_OUT_VENDOR)/etc/dolby/dax-default-spatializer.xml \
-    vendor/xiaomi/malachite/proprietary/vendor/etc/dolby/dax-default.xml:$(TARGET_COPY_OUT_VENDOR)/etc/dolby/dax-default.xml \
+    vendor/xiaomi/malachite/proprietary/vendor/etc/media_codecs_dolby_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_dolby_audio.xml \
     vendor/xiaomi/malachite/proprietary/vendor/etc/misound_res.bin:$(TARGET_COPY_OUT_VENDOR)/etc/misound_res.bin \
     vendor/xiaomi/malachite/proprietary/vendor/etc/misound_res_headphone.bin:$(TARGET_COPY_OUT_VENDOR)/etc/misound_res_headphone.bin \
     vendor/xiaomi/malachite/proprietary/vendor/etc/misound_res_spk.bin:$(TARGET_COPY_OUT_VENDOR)/etc/misound_res_spk.bin \
@@ -842,8 +844,13 @@ PRODUCT_PACKAGES += \
     7816-3-T1 \
     APUWareApusysAidlServer \
     APUWareUtilsAidlServer \
+    android.hardware.bluetooth.audio-impl-mediatek \
     arm.graphics-V4-ndk \
     arm.mali.platform-V2-ndk \
+    c2.dolby.client \
+    c2.dolby.hevc.dec \
+    c2.dolby.hevc.sec.dec \
+    c2.dolby.store \
     libzslselectorpool \
     com.xiaomi.immunesystem.bigdata \
     com.xiaomi.immunesystem.client \
@@ -859,7 +866,6 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.allocator-V2-mediatek \
     android.hardware.graphics.mapper@4.0-impl-mediatek \
     android.hardware.soundtrigger3-impl \
-    android.hardware.bluetooth.audio-impl-mediatek \
     audio.bluetooth.mt6878 \
     audio.primary.mt6878 \
     consumerir.common \
@@ -1009,6 +1015,9 @@ PRODUCT_PACKAGES += \
     libawinicsmartpaparse \
     libbessound_hd_mtk_vendor \
     libblisrc32_vendor \
+    libbluetooth_audio_session_aidl_mtk \
+    libbluetooth_audio_session_aidl_stock \
+    libbluetooth_audio_session_stock \
     libbluetooth_mtk \
     libbt-vendor \
     libbwc \
@@ -1134,6 +1143,9 @@ PRODUCT_PACKAGES += \
     libcodec2_mtk_c2store \
     libcodec2_mtk_vdec \
     libcodec2_mtk_venc \
+    libcodec2_soft_ac4dec \
+    libcodec2_soft_ddpdec \
+    libcodec2_store_dolby \
     libcodec2_vpp_AIMEMC_plugin \
     libcodec2_vpp_AISR_plugin \
     libcodec2_vpp_fa_plugin \
@@ -1156,7 +1168,14 @@ PRODUCT_PACKAGES += \
     libconnfem \
     libcustom_nvram \
     libcvsd_mtk \
+    libdapparamstorage \
+    libdeccfg \
+    libdlbdsservice \
+    libdlbpreg \
     libdlrmsc \
+    libdolbydecoderprocessor \
+    libdolbyeglcore \
+    libdolbyottcameracontrol \
     libdpframework \
     libeffecthal.base \
     libfacerelight \
@@ -1543,19 +1562,23 @@ PRODUCT_PACKAGES += \
     mtk000_mipi_raw_IdxMgr \
     mtk000_mipi_raw_tuning \
     nfc_nci.thn31nfc.tms \
+    libaudiopreprocessing_mtk \
+    libdlbvol \
     libmisoundfx \
     libspatializer \
+    libswdap \
+    libswgamedap \
+    libswvqe \
     tms-cos-dl-common \
     tms-cos-dl-ree \
     tms-utils \
+    vendor.dolby.hardware.dms@2.0-impl \
+    vendor.dolby.hardware.dms@2.0 \
     vendor.mediatek.framework.mtksf_ext-V3-ndk \
     vendor.mediatek.hardware.apuware.apusys-V3-ndk \
     vendor.mediatek.hardware.apuware.utils-V1-ndk_vendor \
     vendor.mediatek.hardware.audio@8.1 \
     vendor.mediatek.hardware.bluetooth.audio-V1-ndk \
-    libbluetooth_audio_session_aidl_mtk \
-    libbluetooth_audio_session_aidl_stock \
-    libbluetooth_audio_session_stock \
     vendor.mediatek.hardware.camera.aovservice-V2-ndk \
     vendor.mediatek.hardware.camera.aovservice-V3-ndk \
     vendor.mediatek.hardware.camera.atms-V1-ndk \
@@ -1733,6 +1756,7 @@ PRODUCT_PACKAGES += \
     manifest_isphal.xml \
     manifest_mmlpq.xml \
     mapper.mediatek.xml \
+    vendor.dolby.hardware.dms.xml \
     vendor.xiaomi.hardware.aidlbgservice-service.xml \
     vendor.xiaomi.hardware.bgservice@1.0-service.xml \
     vendor.xiaomi.sensor.citsensorservice.aidl.xml \
@@ -1753,6 +1777,7 @@ PRODUCT_PACKAGES += \
     camerahalserver \
     mtkfusionrild \
     tetheroffloadservice \
+    vendor.dolby.hardware.dms@2.0-service \
     vendor.mediatek.hardware.mmagent-service \
     vendor.mediatek.hardware.mmlpq@V1-service \
     vendor.mediatek.hardware.nvram-service \
@@ -1760,18 +1785,6 @@ PRODUCT_PACKAGES += \
     vendor.xiaomi.hardware.secure_element-service \
     vtservice_aidl \
     ipsec_mon \
-    libdapparamstorage \
-    libdlbdsservice \
-    libdlbpreg \
-    vendor.dolby.hardware.dms@2.0 \
-    vendor.dolby.hardware.dms@2.0-impl \
-    libdlbvol \
-    libswdap \
-    libswgamedap \
-    libswvqe \
-    libaudiopreprocessing_mtk \
-    vendor.dolby.hardware.dms@2.0-service \
-    vendor.dolby.hardware.dms.xml \
     mi_thermald \
     miteelog \
     mnld \
