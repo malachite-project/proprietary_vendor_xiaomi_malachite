@@ -14394,7 +14394,7 @@ cc_prebuilt_library_shared {
                 "libmtkrillog",
                 "libmtkconfigutils",
                 "libmtktinyxml",
-                "vendor.mediatek.hardware.netdagent@1.0",
+                "vendor.mediatek.hardware.netdagent@1.0_vendor",
                 "libhidlbase",
                 "vendor.mediatek.hardware.netdagent-V1-ndk",
                 "libbinder_ndk",
@@ -19623,7 +19623,7 @@ cc_prebuilt_library_shared {
                 "libmtkrillog",
                 "libmtkconfigutils",
                 "libmtktinyxml",
-                "vendor.mediatek.hardware.netdagent@1.0",
+                "vendor.mediatek.hardware.netdagent@1.0_vendor",
                 "libhidlbase",
                 "vendor.mediatek.hardware.netdagent-V1-ndk",
                 "libbinder_ndk",
@@ -24669,7 +24669,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.mediatek.hardware.netdagent@1.0",
+    name: "vendor.mediatek.hardware.netdagent@1.0_vendor",
+    stem: "vendor.mediatek.hardware.netdagent@1.0",
     owner: "xiaomi",
     strip: {
         none: true,

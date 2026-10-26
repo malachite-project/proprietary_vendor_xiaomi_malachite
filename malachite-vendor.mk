@@ -1613,7 +1613,7 @@ PRODUCT_PACKAGES += \
     vendor.mediatek.hardware.mtkradioex.smartratswitch-V1-ndk \
     vendor.mediatek.hardware.mtkradioex.voice-V1-ndk \
     vendor.mediatek.hardware.netdagent-V1-ndk \
-    vendor.mediatek.hardware.netdagent@1.0 \
+    vendor.mediatek.hardware.netdagent@1.0_vendor \
     vendor.mediatek.hardware.neuropilot.agent-V1-ndk \
     vendor.mediatek.hardware.neuropilot.agent@1.0 \
     vendor.mediatek.hardware.neuropilot.agent@1.1 \
