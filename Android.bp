@@ -2609,6 +2609,29 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libFaceUnlock",
+    owner: "xiaomi",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libFaceUnlock.so",
+            ],
+            shared_libs: [
+                "libdl",
+                "libm",
+                "libc",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libFrameRecord",
     owner: "xiaomi",
     strip: {
@@ -11476,6 +11499,31 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libgazetracking.arcsoft",
+    owner: "xiaomi",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libgazetracking.arcsoft.so",
+            ],
+            shared_libs: [
+                "libmpbase",
+                "liblog",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libged",
     owner: "xiaomi",
     strip: {
@@ -13781,6 +13829,52 @@ cc_prebuilt_library_shared {
             shared_libs: [
                 "liblog",
                 "libmtkcam_ulog",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmiface",
+    owner: "xiaomi",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libmiface.so",
+            ],
+            shared_libs: [
+                "libbase",
+                "libbinder_ndk",
+                "libcamera2ndk_vendor",
+                "libcutils",
+                "libdmabufheap",
+                "libdumpstateutil",
+                "libhardware",
+                "libhidlbase",
+                "libhidltransport",
+                "liblog",
+                "libmediandk",
+                "libnativewindow",
+                "libstagefright_foundation",
+                "libui",
+                "libutils",
+                "libutilscallstack",
+                "android.hardware.biometrics.common-V3-ndk",
+                "android.hardware.biometrics.face-V3-ndk",
+                "vendor.xiaomi.hardware.aon-V1-ndk",
+                "libmisight",
+                "libFaceUnlock",
+                "libgazetracking.arcsoft",
                 "libc++",
                 "libc",
                 "libm",
@@ -25164,6 +25258,31 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "vendor.xiaomi.hardware.aon-V1-ndk",
+    owner: "xiaomi",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/vendor.xiaomi.hardware.aon-V1-ndk.so",
+            ],
+            shared_libs: [
+                "libbinder_ndk",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "vendor.xiaomi.hardware.bgservice@1.0-impl",
     owner: "xiaomi",
     strip: {
@@ -28661,6 +28780,15 @@ prebuilt_etc_xml {
 }
 
 prebuilt_etc_xml {
+    name: "miface.xml",
+    owner: "xiaomi",
+    src: "proprietary/vendor/etc/vintf/manifest/miface.xml",
+    filename_from_src: true,
+    sub_dir: "vintf/manifest",
+    soc_specific: true,
+}
+
+prebuilt_etc_xml {
     name: "vendor.dolby.hardware.dms.xml",
     owner: "xiaomi",
     src: "proprietary/vendor/etc/vintf/manifest/vendor.dolby.hardware.dms.xml",
@@ -29174,6 +29302,33 @@ cc_prebuilt_binary {
                 "vendor.mediatek.hardware.camera.aovservice-V3-ndk",
                 "vendor.mediatek.hardware.camera.isphal_aidl@1.0-impl",
                 "vendor.mediatek.hardware.camera.isphal-V1-ndk",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    relative_install_path: "hw",
+    soc_specific: true,
+}
+
+cc_prebuilt_binary {
+    name: "mifaced",
+    owner: "xiaomi",
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/bin/hw/mifaced",
+            ],
+            shared_libs: [
+                "libbinder_ndk",
+                "libmiface",
                 "libc++",
                 "libc",
                 "libm",
