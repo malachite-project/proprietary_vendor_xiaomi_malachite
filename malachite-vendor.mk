@@ -1577,7 +1577,7 @@ PRODUCT_PACKAGES += \
     vendor.mediatek.hardware.apuware.apusys-V3-ndk \
     vendor.mediatek.hardware.apuware.utils-V1-ndk_vendor \
     vendor.mediatek.hardware.audio@8.1 \
-    vendor.mediatek.hardware.bluetooth.audio-V1-ndk \
+    vendor.mediatek.hardware.bluetooth.audio-V1-ndk_vendor \
     vendor.mediatek.hardware.camera.aovservice-V2-ndk \
     vendor.mediatek.hardware.camera.aovservice-V3-ndk \
     vendor.mediatek.hardware.camera.atms-V1-ndk \
