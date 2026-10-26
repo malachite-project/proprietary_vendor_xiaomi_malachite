@@ -844,6 +844,7 @@ PRODUCT_PACKAGES += \
     7816-3-T1 \
     APUWareApusysAidlServer \
     APUWareUtilsAidlServer \
+    android.frameworks.displayservice@1.0 \
     android.hardware.bluetooth.audio-impl-mediatek \
     arm.graphics-V4-ndk \
     arm.mali.platform-V2-ndk \
