@@ -6,7 +6,6 @@ soong_namespace {
     imports: [
         "device/xiaomi/malachite",
         "hardware/mediatek",
-        "hardware/mediatek/libaedv",
         "hardware/xiaomi",
     ],
 }
