@@ -1250,7 +1250,6 @@ PRODUCT_PACKAGES += \
     libjpegdecoder_malachite \
     libjpegencoder_malachite \
     libksensor \
-    libladder \
     liblpnr \
     libmbrainSDKv \
     libmfllcore \
