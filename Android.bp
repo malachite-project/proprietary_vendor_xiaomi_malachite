@@ -885,7 +885,7 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/hw/android.hardware.soundtrigger3-impl.so",
             ],
             shared_libs: [
-                "android.hardware.soundtrigger3-V3-ndk",
+                "android.hardware.soundtrigger3-V4-ndk",
                 "libbase",
                 "libbinder_ndk",
                 "libutils",
