@@ -1200,7 +1200,7 @@ PRODUCT_PACKAGES += \
     libfgauge_gm30 \
     libfile_op \
     libforkexecwrap \
-    libformatter \
+    libformatter_mtk \
     libfsmsmartpaparse \
     libged \
     libgf_hal \
@@ -1290,7 +1290,7 @@ PRODUCT_PACKAGES += \
     libmmagent \
     libmml \
     libmmlpqImpl \
-    libmnl \
+    libmnl_mtk \
     libmpbase \
     libmsbc_mtk \
     libmtk-fusion-ril-prop-vsim \
