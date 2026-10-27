@@ -1,17 +1,38 @@
-# Vendor artifact agent instructions
+# AGENTS.md
 
-## Provenance and compatibility
+Instructions for coding agents, and the people driving them, working in malachite's
+vendor tree. The general rules (branches, commits, license headers, testing) are in the
+[device tree's AGENTS.md](https://github.com/malachite-project/android_device_xiaomi_malachite/blob/lineage-23.2/AGENTS.md)
+and apply here too, including working as an official LineageOS maintainer would: fix
+causes properly, never with workarounds.
 
-- Treat `proprietary/` as opaque payload, not ordinary editable source. Documentation/tooling changes must preserve its bytes and existing generated build declarations.
-- Intentional blob changes need an approved source, exact input/output hashes, and reproducible extraction/fixup provenance. Keep build declarations synchronized with the selected device repository's extraction rules.
-- Preserve Git LFS rules and distinguish pointer files from retrieved payload. A Git commit alone does not prove that every required LFS object was published or inspected.
-- Keep camera/audio/graphics dependencies coherent with their actual providers, namespaces, symbols, and platform ABI. Dependency-name matches alone do not prove runtime compatibility.
-- Do not run inspected binaries through `ldd`, `dlopen`, or a device as part of a static audit. Never mix firmware/regions or replace userspace merely to hide an unresolved dependency error.
+## This repository is generated
 
-## Guidance and verification
+- Everything under `proprietary/` comes unchanged from stock Xiaomi firmware. Never edit,
+  hex-patch, add or replace a file here by hand.
+- `Android.bp`, `Android.mk`, `BoardConfigVendor.mk` and `malachite-vendor.mk` are written
+  by `setup-makefiles.py` in the device tree. Don't edit them by hand either.
+- To change anything, change the device tree's `proprietary-files.txt` or the fixups in its
+  `extract-files.py`, then re-extract from a stock dump:
+  ```
+  ./extract-files.py <stock dump> --no-cleanup --section '<exact section name>'
+  ```
+  Commit the device tree change and this repository's result together, and check that the
+  diff here contains only the files you meant to change.
+- Name the stock build you extracted from in the commit body (for example
+  `OS3.0.10.0.WOOMIXM`).
 
-[ELF_CONTRACTS.md](ELF_CONTRACTS.md) defines the focused read-only audit and prerequisites; [ELF_RESULTS.md](ELF_RESULTS.md) records results for specific inputs. Use `python3 -m unittest discover -s tests -v` for audit-tool changes with its Clang/LLD/readelf prerequisites. Missing tools or payloads are explicit gaps, not passing checks.
+## Git LFS
 
-Retain metadata and hashes rather than private dumps or unnecessary binary copies. Keep agent guidance outside payload directories.
+Large blobs are stored with Git LFS (`.gitattributes`). Keep new large files under LFS, and
+make sure the LFS objects are pushed with the commit: a commit whose LFS objects are missing
+breaks every checkout.
 
-Completion requires verified payload preservation or a documented intentional replacement, affected extraction/build/ELF contracts checked, and exact evidence limits. Static PASS is not camera, DRM, firmware, boot, or release certification; no physical-device operation is authorized by this file.
+## Commits
+
+Same format as the device tree:
+
+```
+malachite: add stock's Bluetooth session libraries for its HAL
+malachite: use stock's global audio tuning set
+```
