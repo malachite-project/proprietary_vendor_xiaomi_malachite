@@ -13855,7 +13855,7 @@ cc_prebuilt_library_shared {
             shared_libs: [
                 "libbase",
                 "libbinder_ndk",
-                "libcamera2ndk_vendor",
+                "libcamera2ndk_vendor-stock",
                 "libcutils",
                 "libdmabufheap",
                 "libdumpstateutil",
@@ -29995,4 +29995,43 @@ install_symlink {
     soc_specific: true,
     installed_location: "etc/camera/beauty/libTrueSight.so",
     symlink_target: "/vendor/lib64/libTrueSight.so",
+}
+
+cc_prebuilt_library_shared {
+    name: "libcamera2ndk_vendor-stock",
+    owner: "xiaomi",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libcamera2ndk_vendor-stock.so",
+            ],
+            shared_libs: [
+                "libbinder_ndk",
+                "libfmq",
+                "libhidlbase",
+                "libhardware",
+                "libnativewindow",
+                "liblog",
+                "libutils",
+                "libstagefright_foundation",
+                "libcutils",
+                "libcamera_metadata",
+                "libmediandk",
+                "android.frameworks.cameraservice.common-V1-ndk",
+                "android.frameworks.cameraservice.device-V3-ndk",
+                "android.frameworks.cameraservice.service-V3-ndk",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    check_elf_files: true,
+    prefer: true,
+    soc_specific: true,
 }
