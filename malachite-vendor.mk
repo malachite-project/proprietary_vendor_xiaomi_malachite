@@ -737,6 +737,7 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/malachite/proprietary/vendor/etc/init/init.cccirpcd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.cccirpcd.rc \
     vendor/xiaomi/malachite/proprietary/vendor/etc/init/init.vtservice_aidl.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.vtservice_aidl.rc \
     vendor/xiaomi/malachite/proprietary/vendor/etc/init/ipsec_mon.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/ipsec_mon.rc \
+    vendor/xiaomi/malachite/proprietary/vendor/etc/init/miface.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/miface.rc \
     vendor/xiaomi/malachite/proprietary/vendor/etc/init/miteelog.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/miteelog.rc \
     vendor/xiaomi/malachite/proprietary/vendor/etc/init/mtk_agpsd_p.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/mtk_agpsd_p.rc \
     vendor/xiaomi/malachite/proprietary/vendor/etc/init/mtkrild.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/mtkrild.rc \
@@ -921,6 +922,7 @@ PRODUCT_PACKAGES += \
     libDBAccessor_ISP \
     libDR \
     libDefaultFpsActor \
+    libFaceUnlock \
     libFrameRecord \
     libHISCppAlgos \
     libIntelligentFocus \
@@ -1203,6 +1205,7 @@ PRODUCT_PACKAGES += \
     libforkexecwrap \
     libformatter_mtk \
     libfsmsmartpaparse \
+    libgazetracking.arcsoft \
     libged \
     libgf_hal \
     libgpud \
@@ -1273,6 +1276,7 @@ PRODUCT_PACKAGES += \
     libmicamera_aidl_utils \
     libmicamera_hal_core \
     libmicamjson \
+    libmiface \
     libmigpese@2.0 \
     libminikin.xiaomi \
     libmipc \
@@ -1631,6 +1635,7 @@ PRODUCT_PACKAGES += \
     vendor.xiaomi.hardware.aidl.mtdservice-V1-ndk \
     vendor.xiaomi.hardware.aidlbgservice-V1-impl \
     vendor.xiaomi.hardware.aidlbgservice-V1-ndk \
+    vendor.xiaomi.hardware.aon-V1-ndk \
     vendor.xiaomi.hardware.bgservice@1.0-impl \
     vendor.xiaomi.hardware.bgservice@1.0 \
     vendor.xiaomi.hardware.fx.tunnel-V1-ndk \
@@ -1756,6 +1761,7 @@ PRODUCT_PACKAGES += \
     manifest_isphal.xml \
     manifest_mmlpq.xml \
     mapper.mediatek.xml \
+    miface.xml \
     vendor.dolby.hardware.dms.xml \
     vendor.xiaomi.hardware.aidlbgservice-service.xml \
     vendor.xiaomi.hardware.bgservice@1.0-service.xml \
@@ -1775,6 +1781,7 @@ PRODUCT_PACKAGES += \
     android.hardware.nfc-service-tms \
     android.hardware.security.keymint@3.0-service.mitee \
     camerahalserver \
+    mifaced \
     mtkfusionrild \
     tetheroffloadservice \
     vendor.dolby.hardware.dms@2.0-service \
