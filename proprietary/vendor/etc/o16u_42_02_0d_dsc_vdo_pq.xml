@@ -545,7 +545,7 @@
             <Feature FeatureID="0x2200" Type="Normal" MapMultiID="0" MapCoreID="69" DynIndex="0" />
             <Feature FeatureID="0x2300" Type="Normal" MapMultiID="0" MapCoreID="52" DynIndex="2" />
             <Feature FeatureID="0x2310" Type="Normal" MapMultiID="0" MapCoreID="53" DynIndex="0" />
-            <Feature FeatureID="0x2500" Type="Normal" MapSubID="0" MapCoreID="2" SatGain="50" Contrast="50" Brightness="255" PartialY="0" PURP_TONE_S="0" SKIN_TONE_S="6" GRASS_TONE_S="10" SKY_TONE_S="10" PURP_TONE_H="9" SKIN_TONE_H="9" GRASS_TONE_H="12" SKY_TONE_H="12" S_GAIN_BY_Y="0" S_GAIN_BY_Y_EN="1" LSP_EN="1" MEMORY_COLOR="0" LSP="0" />
+            <Feature FeatureID="0x2500" Type="Normal" MapSubID="0" MapCoreID="2" SatGain="35" Contrast="50" Brightness="255" PartialY="0" PURP_TONE_S="0" SKIN_TONE_S="6" GRASS_TONE_S="10" SKY_TONE_S="10" PURP_TONE_H="9" SKIN_TONE_H="9" GRASS_TONE_H="12" SKY_TONE_H="12" S_GAIN_BY_Y="0" S_GAIN_BY_Y_EN="1" LSP_EN="1" MEMORY_COLOR="0" LSP="0" />
             <Feature FeatureID="0x2520" Type="Normal" MapMultiID="0" MapCoreID="73" DynIndex="0" />
             <Feature FeatureID="0x2600" Type="Normal" MapMultiID="0" MapCoreID="74" DynIndex="1" />
             <Feature FeatureID="0x2610" Type="Normal" MapMultiID="0" MapCoreID="54" DynIndex="3" />
@@ -566,7 +566,7 @@
             <Feature FeatureID="0x2200" Type="Normal" MapMultiID="0" MapCoreID="69" DynIndex="0" />
             <Feature FeatureID="0x2300" Type="Normal" MapMultiID="0" MapCoreID="52" DynIndex="2" />
             <Feature FeatureID="0x2310" Type="Normal" MapMultiID="0" MapCoreID="53" DynIndex="0" />
-            <Feature FeatureID="0x2500" Type="Normal" MapSubID="0" MapCoreID="2" SatGain="50" Contrast="50" Brightness="255" PartialY="0" PURP_TONE_S="0" SKIN_TONE_S="6" GRASS_TONE_S="10" SKY_TONE_S="10" PURP_TONE_H="9" SKIN_TONE_H="9" GRASS_TONE_H="12" SKY_TONE_H="12" S_GAIN_BY_Y="0" S_GAIN_BY_Y_EN="1" LSP_EN="1" MEMORY_COLOR="0" LSP="0" />
+            <Feature FeatureID="0x2500" Type="Normal" MapSubID="0" MapCoreID="2" SatGain="35" Contrast="50" Brightness="255" PartialY="0" PURP_TONE_S="0" SKIN_TONE_S="6" GRASS_TONE_S="10" SKY_TONE_S="10" PURP_TONE_H="9" SKIN_TONE_H="9" GRASS_TONE_H="12" SKY_TONE_H="12" S_GAIN_BY_Y="0" S_GAIN_BY_Y_EN="1" LSP_EN="1" MEMORY_COLOR="0" LSP="0" />
             <Feature FeatureID="0x2520" Type="Normal" MapMultiID="0" MapCoreID="73" DynIndex="0" />
             <Feature FeatureID="0x2600" Type="Normal" MapMultiID="0" MapCoreID="74" DynIndex="1" />
             <Feature FeatureID="0x2610" Type="Normal" MapMultiID="0" MapCoreID="54" DynIndex="3" />
