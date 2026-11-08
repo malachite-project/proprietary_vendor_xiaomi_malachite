@@ -1567,6 +1567,7 @@ PRODUCT_PACKAGES += \
     mtk000_mipi_raw_tuning \
     nfc_nci.thn31nfc.tms \
     libaudiopreprocessing_mtk \
+    libaudiohalutils \
     libdlbvol \
     libmisoundfx \
     libspatializer \
